@@ -1,0 +1,189 @@
+html{
+   scroll-behavior: smooth;
+}
+
+.header {
+   font-style: italic;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   padding: 5px;
+   background-color: rgba(71, 93, 168, 0.719);
+   border-radius: 10px;
+   border-style:solid;
+ 
+}
+
+
+.header .articles-container nav{
+  
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   text-align: center;
+   flex-grow: 1;
+   padding: 5px;
+   margin: 10px;
+   gap: 5px;
+  
+}
+
+
+.header h3 {
+   padding: 5px 12px;
+  
+   transition: all 0.3s ease 0s;
+   a {
+      text-decoration: none;
+      font-family: Arial;
+      color: rgb(0, 0, 0);
+      
+   }
+   
+}
+.header h3:hover, .header a:hover {
+   
+   color: rgb(117, 37, 209);
+   transform:translateY(-5px);
+
+}
+
+.barry.victims.container h2{
+   text-align: center;
+}
+
+.introduction #barry-info {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   text-align: justify;
+  
+  
+}
+
+#barry-crimes, .victims-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   background: rgb(87, 124, 228, 0.479);
+  
+}
+
+#barry-crimes .container, .victims-container .container {
+   display: flex;
+   width: 50%;
+   align-items: flex-start;
+   flex-shrink: 1;
+   flex-grow: 1;
+   justify-content: center;
+   border-right: 1px solid black;
+}
+
+#barry-crimes p, .victims-container p {
+   font-family: Verdana, Helvetica, Arial;
+   text-align: justify;
+   padding: 15px 15px;
+}
+
+#barry-crimes .barry-photo img, .victims-photo img{
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+   width: 240px;
+   height: 248px;
+
+}
+
+
+
+
+
+
+
+#exposing-story {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: bolder;
+}
+
+
+
+.Exposing-section {
+   background: rgba(87, 124, 228, 0.479);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center ;
+}
+
+.Timeline {
+   width: 60%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 15px;
+   margin: 10px;
+
+  
+}
+
+.flex {
+   display: flex;
+   
+   flex-direction: column;
+   
+   align-items: center;
+   text-align: center;
+  
+}
+
+
+.Exposing-section p {
+   
+   transition: all 0.4s ease 0s;
+   
+}
+
+
+
+.Exposing-section p:hover {
+   /* border: 1px solid rgb(0, 0, 0); */
+   background-color: rgba(142, 169, 243, 0.644);
+   /* transform:translatex(10px); */
+   
+}
+
+
+.Exposing-section h2 {
+   text-align: center; 
+   
+}
+
+.Exposing-section h3 {
+   
+   font-weight: bold;
+   font-size: 25px;
+   color: rgb(0, 0, 0);
+   text-align:center;
+   
+   
+}
+
+.Exposing-section p {
+   font-family: Verdana, Helvetica, Arial;
+   text-align: justify;
+   padding: 15px 15px;
+  
+  
+}
+#return {
+   margin: 5px;
+   text-align: right;
+}
+
