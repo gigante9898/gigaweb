@@ -96,12 +96,6 @@ html{
 
 }
 
-
-
-
-
-
-
 #exposing-story {
    display: flex;
    justify-content: center;
@@ -186,4 +180,5 @@ html{
    margin: 5px;
    text-align: right;
 }
+
 
