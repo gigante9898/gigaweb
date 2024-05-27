@@ -49,29 +49,26 @@ html{
 
 }
 
+
+
 .barry.victims.container h2{
    text-align: center;
+
 }
 
-.introduction #barry-info {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   text-align: justify;
-  
-  
-}
 
-#barry-crimes, .victims-container {
+#barry-crimes, .victims-container, .potential-victims-container {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
    background: rgb(87, 124, 228, 0.479);
   
 }
+.barry-info.container, .victims-info.container, .potential-victims-info.container {
+   margin: 40px 0 ;
+}
 
-#barry-crimes .container, .victims-container .container {
+#barry-crimes .container, .victims-container .container, .potential-victims-container .container{
    display: flex;
    width: 50%;
    align-items: flex-start;
@@ -79,15 +76,18 @@ html{
    flex-grow: 1;
    justify-content: center;
    border-right: 1px solid black;
+  
 }
 
-#barry-crimes p, .victims-container p {
+
+#barry-crimes p, .victims-container p, .potential-victims-container p {
    font-family: Verdana, Helvetica, Arial;
    text-align: justify;
    padding: 15px 15px;
+   margin: 20px;
 }
 
-#barry-crimes .barry-photo img, .victims-photo img{
+#barry-crimes .barry-photo img, .victims-photo img, .potential-victims-photo img{
    display: flex;
    justify-content: flex-end;
    align-items: flex-end;
