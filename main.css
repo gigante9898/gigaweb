@@ -1,6 +1,9 @@
 html{
    scroll-behavior: smooth;
 }
+body {
+   background-color: rgb(22, 21, 21);
+}
 
 .header {
    font-style: italic;
@@ -12,6 +15,9 @@ html{
    background-color: rgba(71, 93, 168, 0.719);
    border-radius: 10px;
    border-style:solid;
+   h1 {
+      color: white;
+   }
  
 }
 
@@ -37,7 +43,7 @@ html{
    a {
       text-decoration: none;
       font-family: Arial;
-      color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
       
    }
    
@@ -50,51 +56,99 @@ html{
 }
 
 
-
-.barry.victims.container h2{
-   text-align: center;
+section .main-container  *{
+   transition: 1.2s;
 
 }
 
+#barry-info .animation, #victim1-info .animation{
+   transform: translateX(-101%); 
+}
 
+#barry-info.show-animate .animation, #victim1-info.show-animate .animation{
+   transform:translateX(0);
+   animation: borderAnim 2s;
+}
+
+
+#victim2-info .animation{
+   transform: translateX(-101%); 
+}
+
+#victim2-info.show-animate .animation {
+   transform:translateX(0);
+}
+
+
+@keyframes borderAnim {
+   from {opacity: 0;}
+   to {opacity: 1;}
+}
+
+#main-container h2{
+   text-align: center;
+   color: rgb(255, 255, 255); 
+
+}
+
+/*Contains the text box and the image*/
 #barry-crimes, .victims-container, .potential-victims-container {
    display: flex;
    flex-direction: row;
-   justify-content: space-between;
-   background: rgb(87, 124, 228, 0.479);
+   justify-content: right;
+   background: rgba(103, 108, 121, 0.479);
   
 }
+
+
+
+/*Contains the text box, image and also the h2*/
 .barry-info.container, .victims-info.container, .potential-victims-info.container {
    margin: 40px 0 ;
 }
 
+/* */
 #barry-crimes .container, .victims-container .container, .potential-victims-container .container{
    display: flex;
-   width: 50%;
+   min-width: 35rem;
    align-items: flex-start;
    flex-shrink: 1;
    flex-grow: 1;
-   justify-content: center;
-   border-right: 1px solid black;
+   
+   /*border-right: 1px solid rgb(255, 255, 255);*/
   
 }
-
 
 #barry-crimes p, .victims-container p, .potential-victims-container p {
    font-family: Verdana, Helvetica, Arial;
    text-align: justify;
+   font-size: 1em;
    padding: 15px 15px;
    margin: 20px;
+   color: rgb(255, 255, 255);
 }
 
 #barry-crimes .barry-photo img, .victims-photo img, .potential-victims-photo img{
    display: flex;
    justify-content: flex-end;
+   flex-shrink: 1;
    align-items: flex-end;
    width: 240px;
    height: 248px;
 
 }
+@media screen and (max-width: 840px) {
+   #barry-crimes .container, .victims-container .container, .potential-victims-container .container {
+      min-width: 25rem;
+   }
+ }
+
+ @media screen and (max-width: 840px) {
+   #barry-crimes .barry-photo img, .victims-photo img, .potential-victims-photo img {
+      display: none;
+   }
+ }
+
 
 #exposing-story {
    display: flex;
@@ -124,8 +178,8 @@ html{
    gap: 15px;
    margin: 10px;
 
-  
 }
+
 
 .flex {
    display: flex;
@@ -137,24 +191,8 @@ html{
   
 }
 
-
-.Exposing-section p {
-   
-   transition: all 0.4s ease 0s;
-   
-}
-
-
-
-.Exposing-section p:hover {
-   /* border: 1px solid rgb(0, 0, 0); */
-   background-color: rgba(142, 169, 243, 0.644);
-   /* transform:translatex(10px); */
-   
-}
-
-
 .Exposing-section h2 {
+   color: rgb(255, 255, 255);
    text-align: center; 
    
 }
@@ -163,19 +201,53 @@ html{
    
    font-weight: bold;
    font-size: 25px;
-   color: rgb(0, 0, 0);
+   color: rgb(255, 255, 255);
    text-align:center;
+}
+
+
+.Exposing-section p:hover {
+   /* border: 1px solid rgb(0, 0, 0); */
+   /* transform:translatex(10px); */
+   background-color: rgba(163, 176, 214, 0);
    
-   
+}
+.Exposing-section p:hover::before {
+   width: 100%;
+   animation: trans 1s ease;
 }
 
 .Exposing-section p {
    font-family: Verdana, Helvetica, Arial;
    text-align: justify;
    padding: 15px 15px;
-  
+   font-size: 1em;
+   color: rgb(255, 255, 255);
+   transition: all 0.4s ease 0s;
+   position: relative;
+   overflow: hidden;
   
 }
+
+.Exposing-section p::before {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 0;
+   height: 3px;
+   background-image: linear-gradient(to left, transparent 0%, rgba(255, 255, 255, 0.678) 50%, transparent 100%);
+}
+
+@keyframes trans {
+   from { width: 0%;}
+   to {width: 100%;}
+}
+
+
+
+
 #return {
    margin: 5px;
    text-align: right;
