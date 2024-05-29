@@ -61,23 +61,21 @@ section .main-container  *{
 
 }
 
-#barry-info .animation, #victim1-info .animation{
+#barry-info .animation, 
+#victim1-info .animation, 
+#victim2-info .animation,
+#potential-victims-info .animation {
    transform: translateX(-101%); 
 }
 
-#barry-info.show-animate .animation, #victim1-info.show-animate .animation{
+#barry-info.show-animate .animation, 
+#victim1-info.show-animate .animation, 
+#victim2-info.show-animate .animation,
+#potential-victims-info.show-animate .animation {
    transform:translateX(0);
    animation: borderAnim 2s;
 }
 
-
-#victim2-info .animation{
-   transform: translateX(-101%); 
-}
-
-#victim2-info.show-animate .animation {
-   transform:translateX(0);
-}
 
 
 @keyframes borderAnim {
@@ -133,8 +131,8 @@ section .main-container  *{
    justify-content: flex-end;
    flex-shrink: 1;
    align-items: flex-end;
-   width: 240px;
-   height: 248px;
+   width: 5rem;
+   height: 100%;
 
 }
 @media screen and (max-width: 840px) {
